@@ -18,7 +18,7 @@ Run this script to test your webcam is working and opencv package is up and runn
 and if human face presented in the feed, square will be drawn around it (if face detection algorithm is working).
 
 #### 2. creatingDataset.py
-Run this script to create dataset from capture of your webcam. You will need to insert userId and userName to save information to sqlite database. NOTE: before running this script, remove sample image from **dataset_users** folder
+Run this script to create dataset from capture of your webcam. You will need to insert userId and userName to save information to sqlite database. **NOTE: before running this script, remove sample image from dataset_users folder**
 Algorithm finds the human face, then saves image to folder for further training.
 
 #### 3. trainingOnDataset.py
