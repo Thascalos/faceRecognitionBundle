@@ -30,7 +30,7 @@ while(True):
         id, conf=rec.predict(gray[y:y+h, x:x+w])
         print('UserID: '+str(id)+', Confidence: '+str(conf))
         profile=getProfile(id)
-        if int(conf) < 75 or int(conf) > 100: profile=0
+        if int(conf) > 75: profile=0
         if (profile!=0):
             cv2.putText(img, 'Name: ' +str(profile[1]), (x, y+h+30), font, 0.55, fontColor, 1)
             cv2.putText(img, 'Age: '+str(profile[2]), (x, y+h+60), font, 0.55, fontColor, 1)
@@ -41,4 +41,3 @@ while(True):
         break
 
 cam.release()
-cv2.destroyAllwindows()
