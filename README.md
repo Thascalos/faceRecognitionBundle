@@ -1,5 +1,5 @@
 # faceRecognitionBundle
-Sample face recognition bundle written on Python3. Uses opencv, numpy packages and sqllite for storing user information.
+Simple face recognition bundle written on Python3. Uses opencv, numpy packages and sqllite for storing user information.
 
 ## Getting started
 Fist of all you need to install all required packages, that located in requirements.txt. Then try to run **testingFaceRecognition.py** to test your webcam and facial recognition algorithm, that was provided by **opencv-contrib-python** package
@@ -14,8 +14,7 @@ pip3 install -r requirements.txt
 ### Usage
 
 #### 1. testingFaceRecognition.py
-Run this script to test your webcam is working and opencv package is up and running. New window will open with capturing feed from your webcam
-and if human face presented in the feed, square will be drawn around it (if face detection algorithm is working).
+Run this script to test that your webcam is working and opencv package is up and running. New window will open with the feed from your webcam and if the human face presented in the feed, square will be drawn around it (if face detection algorithm is working).
 
 #### 2. creatingDataset.py
 Run this script to create dataset from capture of your webcam. You will need to insert userId and userName to save information to sqlite database. **NOTE: before running this script, remove sample image from dataset_users folder**.
@@ -27,10 +26,10 @@ Run this script to create model, that based on LBPH algorithm. Output is YAML fi
 
 #### 4. detectFacesFromWebcam.py
 After all the steps, you can run this script to test you computed model. New window will be opened with feed from your webcam
-and if human face or faces are presented in the feed, square (if face detection algorithm is working) will be drawn around them with addition information from sqlite database.
+and if human face or faces are presented in the feed, square (if face detection algorithm is working) will be drawn around them with additional information from sqlite database.
 
 ### DB structure
-In this sample, sqlite database, that named **FacesDB.db**, is used. Just one table are enough:
+Structure of the table People from sqlite database: **FacesDB.db**:
 
 | NAME | TYPE |
 | ------ | ------ |
